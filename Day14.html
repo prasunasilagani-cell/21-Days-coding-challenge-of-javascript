@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+</style>
+<body>
+   <div>
+    <script>
+        //1.Pattern using input rows
+        let n = (prompt("Enter number of rows for printing pattern: "));
+        document.write("The pattern using ",n," rows is:")
+        document.write("<br><br>")
+for(i=1;i<=n;i++){
+    for(j=1;j<=i;j++){
+        document.write("*")
+    }
+    document.write("<br>")
+}
+ document.write("<br>")
+    </script>
+   </div>
+   <div>
+    <script>
+        //2.square using input rows
+        let x= (prompt("Enter number of rows for printing square pattern: "));
+        document.write("The square pattern using ",x," rows is:")
+        document.write("<br><br>")
+for(i=1;i<=x;i++){
+    for(j=1;j<=x;j++){
+        document.write("* ")
+    }
+    document.write("<br>")
+}
+ document.write("<br>")
+    </script>
+   </div>
+   <div>
+    <script>
+        //3.pyramid using input rows
+        let y=prompt("Enter number of rows for printing pyramid pattern:");
+        document.write("The pyramid pattern using ",y," rows is:")
+        document.write("<br><br>")
+        for(i=1;i<=n;i++){
+             for(k=4;k>=i;k--){
+                document.write("&nbsp;&nbsp;")
+            }
+            for(j=1;j<=i;j++){
+                document.write("*")
+            }
+            for(l=1;l<=i-1;l++){
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+    </script>
+   </div>
+   <div>
+    <script>
+        //4.Hollow pyramid using input rows
+         let g=prompt("Enter number of rows for printing hollow pyramid:")
+          let h=prompt("Enter number of columns for printing hollow pyramid:")
+        document.write("The hollow pyramid using ",g," rows and ",h," columns is:")
+        document.write("<br><br>")
+        for(i=1;i<=5;i++){
+    for(j=1;j<=9;j++){
+        if(i==5||i+j==6&&j<=5||i==2&&j==6||i==3&&j==7||i==4&&j==8){
+           document.write("* ")
+        }
+        else{
+       document.write("&nbsp;&nbsp;&nbsp;")
+    }
+    }
+    document.write("<br>")
+}
+    </script>
+   </div>
+   <div>
+    <script>
+        //5.Number pyramid using input rows
+         let f=prompt("Enter number of rows for printing diamond pattern:")
+        document.write("The number pyramid using ",f," rows is:")
+        document.write("<br><br>")
+        for(i=1;i<=f;i++){
+            for(k=4;k>=i;k--){
+                document.write("&nbsp;&nbsp;")
+            }
+            for(j=1;j<=2*i-1;j++){
+                document.write(j)
+            }
+            document.write("<br>")
+        }
+    </script>
+   </div>
+   <div>
+    <script>
+        //6.Diamond pattern using input rows
+        let d=prompt("Enter number of rows for printing diamond pattern:")
+        document.write("The diamond pattern using ",d," rows is:")
+        document.write("<br><br>")
+        for(i=1;i<=d;i++){
+    for(k=n;k>=i;k--){
+        document.write("&nbsp;&nbsp;")
+    }
+    for(j=1;j<=i;j++){
+       document.write("*")
+     }
+     for(l=i-1;l>=1;l--){
+       document.write("*")
+     }
+    document.write("<br>")
+}
+ for(i=1;i<=d-1;i++){
+    output=""
+    for(k=1;k<=i+1;k++){
+       document.write("&nbsp;&nbsp;")
+    }
+    for(j=d-1;j>=i;j--){
+        document.write("*")
+    }
+     for(l=i+1;l<=4;l++){
+       document.write("*")
+     }
+     document.write("<br>")
+}
+    </script>
+   </div>
+</body>
+</html>

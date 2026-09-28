@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Even or Odd</h1>
+    <label for="">Enter the number</label>
+    <input type="text" id="n1"><br>
+    <label for="">Result</label>
+    <input type="text" id="res"><br>
+    <button onclick="EvenOdd()">Result</button>
+
+    <h1>Positive or Negative or Zero</h1>
+    <label for="">Enter the number</label>
+    <input type="text" id="n2"><br>
+    <label for="">Result</label>
+    <input type="text" id="result"><br>
+    <button onclick="PosNeg()">Result</button>
+
+    <h1>Largest of two numbers</h1>
+    <label for="">Enter the number</label>
+    <input type="text" id="n3"><br>
+    <label for="">Enter the number</label>
+    <input type="text" id="n4"><br>
+    <label for="">Result</label>
+    <input type="text" id="result1"><br>
+    <button onclick="Largest()">Result</button>
+
+    <h1>Age Eligibility</h1>
+    <label for="">Enter the Age</label>
+    <input type="text" id="age"><br>
+    <label for="">Result</label>
+    <input type="text" id="result2"><br>
+    <button onclick="Age()">Result</button>
+
+    <h1>Celsius to Farenhiet</h1>
+    <label for="">Enter the value</label>
+    <input type="text" id="celsius"><br>
+    <label for="">Result</label>
+    <input type="text" id="result3"><br>
+    <button onclick="Celsius_Farenhiet()">Result</button>
+
+    <h1>Simple Calculator</h1>
+    <label for="">Enter the value</label>
+    <input type="text" id="n8"><br>
+    <label for="">Enter the value</label>
+    <input type="text" id="n9"><br>
+    <label for="">Result</label>
+    <input type="text" id="result4"><br><br>
+    <button onclick="Add()">Add</button>
+    <button onclick="Subtract()">Subtract</button>
+    <button onclick="Multiply()">Multiply</button>
+    <button onclick="Divide()">Divide</button>
+    <button onclick="Mod()">Modulus</button>
+
+    <script>
+      function EvenOdd(){
+          n1=parseInt(document.getElementById("n1").value)  
+          if(n1%2==0){
+            document.getElementById("res").value="Even"
+          }
+          else{
+            document.getElementById("res").value="Odd"
+          }
+      }
+
+      function PosNeg(){
+        n2=parseInt(document.getElementById("n2").value)
+        if(n2>0){
+            document.getElementById("result").value="Positive"
+        }
+        else if(n2==0){
+            document.getElementById("result").value="Zero"
+        }
+        else{
+            document.getElementById("result").value="Negative"
+        }
+      }
+
+      function Largest(){
+        n3=parseInt(document.getElementById("n3").value)
+        n4=parseInt(document.getElementById("n4").value)
+        if(n3>n4){
+            document.getElementById("result1").value=n3
+        }
+        else{
+            document.getElementById("result1").value=n4
+        }
+      }
+
+      function Age(){
+        n4=parseInt(document.getElementById("age").value)
+        if(n4>18){
+            document.getElementById("result2").value="Eligible for voting"
+        }
+        else{
+            document.getElementById("result2").value="Not eligible for voting"
+        }
+      }
+
+      function Celsius_Farenhiet(){
+        n5=parseInt(document.getElementById("celsius").value)
+        farenhiet=(n5*9/5)+32
+        document.getElementById("result3").value=farenhiet
+      }
+
+      function Add(){
+        n8=parseInt(document.getElementById("n8").value)
+        n9=parseInt(document.getElementById("n9").value)
+        result=n8+n9
+        document.getElementById("result4").value=result
+      }
+
+      function Subtract(){
+        n8=parseInt(document.getElementById("n8").value)
+        n9=parseInt(document.getElementById("n9").value)
+        result=n8-n9
+        document.getElementById("result4").value=result
+      }
+
+      function Multiply(){
+        n8=parseInt(document.getElementById("n8").value)
+        n9=parseInt(document.getElementById("n9").value)
+        result=n8*n9
+        document.getElementById("result4").value=result
+      }
+
+      function Divide(){
+        n8=parseInt(document.getElementById("n8").value)
+        n9=parseInt(document.getElementById("n9").value)
+        result=n8/n9
+        document.getElementById("result4").value=result
+      }
+
+      function Mod(){
+        n8=parseInt(document.getElementById("n8").value)
+        n9=parseInt(document.getElementById("n9").value)
+        result=n8%n9
+        document.getElementById("result4").value=result
+      }
+    </script>
+</body>
+</html>
